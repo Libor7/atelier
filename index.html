@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+  <html lang="sk">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Beatkin Ateliér</title>
+      <link href="https://fonts.googleapis.com/css?family=Euphoria+Script&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      <link href="css/styles.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.24/angular-ui-router.min.js"></script>
+      <script src="js/main-module.js"></script>
+      <script src="js/services/image-service.js"></script>
+      <script src="js/services/string-service.js"></script>
+      <base href="/beatka/" />
+    </head>
+    <body ng-app="mainModule" ng-controller="mainController as mainCtrl">
+      <div id="pageCover"></div>
+      <div class="menu" ng-show="mainCtrl.menuDisplayed" ng-cloak>
+        <ul>
+          <li ng-click="mainCtrl.changeState('about')">O mne</li>
+          <li ng-click="mainCtrl.toggleSubmenu()">Galéria</li>
+          <li ng-click="mainCtrl.changeState('contact.form')">Kontakt</li>
+        </ul>
+      </div>
+      <div class="submenu" ng-show="mainCtrl.submenuDisplayed" ng-cloak>
+        <ul>
+          <li ng-click="mainCtrl.changeState('gallery.portraits')">Portréty</li>
+          <li ng-click="mainCtrl.changeState('gallery.pictures')">Obrazy</li>
+        </ul>
+      </div>
+      <div class="container-fluid header">
+        <div class="row">
+          <h1 class="col-xs-5 heading" ng-click="mainCtrl.changeState('home')" ng-cloak>Beatkin ateliér</h1>
+        </div>
+        <div class="row menu-btn" ng-click="mainCtrl.toggleMenu()">Vstúpte</div>
+      </div>
+      <ui-view></ui-view>
+    </body>
+  </html>

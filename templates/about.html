@@ -1,0 +1,19 @@
+﻿<div class="container-fluid">
+  <div class="row aboutme">
+    <p>Ahojte, volám sa Beátka, mám {{ aboutCtrl.calculateAge() }} rokov a pochádzam z Dolného Kubína. Veľmi ma baví kreslenie, rada kreslím portréty a teším sa, ak sa mi podarí verne zachytiť podobu. Za každou dobrou kresbou je tvrdá práca a každé začaté dielo je potrebné dokončiť, čo býva niekedy celkom vyčerpávajúce.</p>
+    <p>Mám za sebou niekoľko drobných úspechov. <span ng-click="mainCtrl.changeState('book')">Ilustrovala som knihu</span>, ilustrovala som magnetku, v súťaži „Môj športový idol“ v rámci Žilinského samosprávneho kraja som získala druhé miesto a <span 
+ng-click="mainCtrl.changeState('exposition')">mala som výstavu</span> v jednom podniku pre mladých s názvom Garáž, ktorá začala 10. októbra 2019 a skončila vo februári 2020.</p>
+    <p>Svoje nové kresby zvyknem pridávať na svoj instagramový profil do storiek -> @beavatka.</p>
+    <p>Umenie je krásne, duchovné a súčasťou našich životov, nezabudnite však, ako povedal Vincent van Gogh:</p>
+    <div id="quote">
+      <p>V ničom sa neskrýva viac umenia, než v láske k ľuďom.</p>
+    </div>
+    <p>V galérii na tejto stránke si taktiež môžete pozrieť zopár obrazov, ktoré som namaľovala.</p>
+    <p>Beátka</p>
+    <div id="darken" ng-click="aboutCtrl.closeLoginForm()"></div>
+    <div id="loginForm"></div>
+    <div ng-click="aboutCtrl.authorLogin()" title="Administratívny prístup pre autorku">
+      <i class="material-icons">vpn_key</i>
+    </div>
+  </div>
+</div>

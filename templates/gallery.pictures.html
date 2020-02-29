@@ -1,0 +1,12 @@
+﻿<div class="container-fluid">
+  <div class="row pictures-container">
+    <input class="form-control" type="text" ng-model="pictCtrl.imageFilter" placeholder="{{ pictCtrl.filterPlaceholder }}" />
+    <button class="btn custom-btn" type="button" ng-click="pictCtrl.toggleSearchType()">{{ pictCtrl.searchType }}</button>
+    <div ng-repeat="image in pictCtrl.images">
+      <img ng-src="{{ image.mobile }}" alt="{{ image.description }}" />
+      <p>{{ image.name }}</p>
+      <p>{{ image.description }}</p>
+    </div>
+    <p ng-if="pictCtrl.noImageFound">Hľadaný výraz <span class="no-image-found">{{ pictCtrl.imageFilter }}</span> sa nenachádza v názve žiadneho obrazu. Skúste zadať iný výraz</p>
+  </div>
+</div>

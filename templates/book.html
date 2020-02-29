@@ -1,0 +1,8 @@
+﻿<div class="container-fluid book-container">
+  <div class="row">
+    <img ng-repeat="book in bookCtrl.bookPaintings track by $index" ng-click="bookCtrl.resizeImage($index)" 
+ng-src="{{ book.mobile }}" alt="{{ book.description }}" id="{{ 'item' + $index }}" />
+    <p>{{ bookCtrl.text }}</p>
+    <div id="backToAbout" ng-click="mainCtrl.changeState('about')">Späť</div>
+  </div>
+</div>

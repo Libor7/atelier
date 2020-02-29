@@ -1,0 +1,16 @@
+﻿<div class="contact-container">
+  <div class="contact">
+    <form>
+      <input type="text" class="form-control" placeholder="Vaše meno" id="name" />
+      <input type="email" class="form-control" placeholder="Vaša emailová adresa" id="email" />
+      <div id="messageText" contentEditable="true" ng-focus="conCtrl.enterMessage()" ng-blur="conCtrl.leaveMessage()">
+        Text správy
+      </div>
+      <div id="exampleWrapper">
+        <p>{{ conCtrl.example.formula }}</p>
+        <input type="text" class="form-control" placeholder="Výsledok" id="result" />
+      </div>
+      <input type="submit" class="btn custom-btn" ng-click="conCtrl.sendMessage()" id="send" />
+    </form>
+  </div>
+</div>
